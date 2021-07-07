@@ -13,7 +13,7 @@ $arr = ['name' => 'Nikita',
 ];
 
 foreach ($arr as $a){
-    print_r($a);
+    print_r ($a);
     echo "<br>";
 };
 
@@ -21,6 +21,20 @@ foreach ($arr as $a){
 
 $my_arr = [];
 for ($i = 0; $i < 20; $i++) {
-    $my_arr[] = rand(1, 20);
+    $my_arr[] = rand(1, 40);
 }
 print_r($my_arr);
+echo "<br>";
+
+foreach ($my_arr as $key => $value){
+    echo $key." key of value: ".$value;
+    echo "<br>";
+}
+
+//task4
+
+foreach ($my_arr as $item) {
+    if ($item % 3 == 0 && $item % 5 == 0){
+        echo $item." делится на 3 и на 5!";
+    }
+}
