@@ -10,4 +10,5 @@ $arr = ['name' => 'Nikita',
         'dateOfBirth'=> '4.02.1997',
         'customArray' => [1, 2, 3],
         10 => 'last item'
+
 ];
