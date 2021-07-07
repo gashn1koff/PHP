@@ -13,4 +13,6 @@ $arr = ['name' => 'Nikita',
 
 ];
 
-print_r($arr);
+foreach ($arr as $a){
+    print_r ($a);
+};
