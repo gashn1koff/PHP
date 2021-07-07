@@ -12,3 +12,5 @@ $arr = ['name' => 'Nikita',
         10 => 'last item'
 
 ];
+
+print_r($arr);
