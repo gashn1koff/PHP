@@ -10,3 +10,16 @@ if ($newStr == strrev($newStr)) {
     echo 'Не перевертыш';
 }
 
+// 2. Найти самое длинное слово в строке
+$string = '444 3333333333 ab ccba 66666666666666';
+
+$arr = explode(' ', $string);
+$max = '';
+
+foreach($arr as $item) {
+    if (strlen($item) > strlen($max)){
+        $max = $item;
+    }
+}
+
+echo $max. ' '.strlen($max);
