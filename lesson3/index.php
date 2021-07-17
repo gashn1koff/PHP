@@ -42,3 +42,17 @@ foreach($arr as $item) {
 echo "Заглавных - $sumUp, прописных - $sumLower,".' длина строки равна - '.strlen($string);
 
 
+// 5. Посчитать количество четных и нечетных элементов массива
+
+$arr = [1, 2, 3, 3];
+$countEven = 0;
+$countOdd = 0;
+foreach($arr as $item) {
+    if ($item % 2 == 0){
+        $countEven += 1;
+    } else {
+        $countOdd += 1;
+    }
+}
+
+echo "Нечетные - $countOdd, четные - $countEven";
