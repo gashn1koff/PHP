@@ -23,3 +23,22 @@ foreach($arr as $item) {
 }
 
 echo $max. ' '.strlen($max);
+
+//3.  Посчтитать количество заглавных и прописных букв в строке
+
+$string = 'Nikita Gashnikov';
+
+$arr = str_split($string);
+$sumUp = 0;
+$sumLower = 0;
+foreach($arr as $item) {
+    if (ord($item) >= 65 && ord($item) <= 90) {
+        $sumUp += 1;
+    } else if (ord($item) >= 97 && ord($item) <= 122) {
+        $sumLower += 1;
+    }
+}
+
+echo "Заглавных - $sumUp, прописных - $sumLower,".' длина строки равна - '.strlen($string);
+
+
