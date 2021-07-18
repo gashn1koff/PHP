@@ -106,3 +106,36 @@ foreach($arr as $item){
 }
 
 var_dump($result);
+
+
+// 9. В двумерном массиве поменять четные и нечетные столбцы местами
+
+$arr = [
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4, 5 ,6]
+];
+
+foreach($arr as $item) {
+    for($i = 0; $i < count($item); $i++){
+        echo $item[$i].' ';
+    }
+    echo "\n";
+}
+
+for($i = 0; $i < count($arr); $i++){
+    for($j = 1; $j < count($arr[$i]); $j += 2){
+        [$arr[$i][$j], $arr[$i][$j - 1]] = [$arr[$i][$j - 1], $arr[$i][$j]];
+    }
+}
+
+echo "\n";
+
+foreach($arr as $item) {
+    for($i = 0; $i < count($item); $i++){
+        echo $item[$i].' ';
+    }
+    echo "\n";
+}
