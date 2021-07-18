@@ -56,3 +56,16 @@ foreach($arr as $item) {
 }
 
 echo "Нечетные - $countOdd, четные - $countEven";
+
+
+// 6. Вывести на экран те элементы массива, которые выше среднего значения
+
+$array = [55, 3.05, 3, 41, 5];
+$mean = array_sum($array) / count($array);
+echo "$mean - среднее значение"."\n";
+
+foreach($array as $item){
+    if ($item > $mean) {
+        echo $item."\n";
+    }
+}
