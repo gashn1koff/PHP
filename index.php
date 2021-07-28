@@ -66,3 +66,16 @@ function getAvg($arr){
 
 getAvg($myArray);
 
+
+// task 5 Написать функцию, которая генерирует массив случайных значений.
+// Количество элементов массива передается в качестве аргумента
+
+function genRandInt($n){
+    $arr = [];
+    for($i = 0; $i < $n; $i++){
+        $arr[] = rand(0, 15);
+    }
+    return $arr;
+}
+
+var_dump(genRandInt(5));
