@@ -34,6 +34,34 @@ function showDay($a){
 showDay(1);
 
 
+//task 2 Создайте функцию, которая обрезает строку до нужного размера.
+//  Необходимо учесть, что слово в конце строки не должно быть обрезано
+
+
+$string = 'nikita olegovich gashnikov';
+
+function getSubStr($string, $length){
+    if($length === 0) {
+        echo 'Длина 0. Пустая строка!';
+    }else {
+        $old_string = substr($string, $length);
+        $new_string = substr($string, 0, $length);
+        echo "незаконченная строка ".$new_string."\n";
+        for($i = 0; $i < strlen($old_string); $i++){
+            if($old_string[$i] == ' ') {
+                break;
+            } else {
+                $new_string = $new_string.$old_string[$i];
+            }
+        }
+
+        echo "законченная строка ".$new_string."\n";
+    }
+}
+
+getSubStr($string, 10);
+
+
 //task 3 Написать функцию, которая будет менять порядок слов в строке на обратный
 
 
