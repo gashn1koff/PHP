@@ -51,3 +51,18 @@ function changeStr($string){
 changeStr($string);
 
 
+//task 4  Написать функцию, которая вычисляет среднее арифметическое элементов массива, переданного ей в качестве аргумента.
+//  Не использовать array_sum и т.д. Простым перебором через цикл
+
+
+$myArray = [1, 2, 3, 5];
+function getAvg($arr){
+    $sum = 0;
+    foreach ($arr as $item){
+        $sum += $item;
+    }
+    echo $sum / count($arr);
+}
+
+getAvg($myArray);
+
