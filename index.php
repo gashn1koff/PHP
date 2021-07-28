@@ -30,3 +30,24 @@ function showDay($a){
         }
     }
 }
+
+showDay(1);
+
+
+//task 3 Написать функцию, которая будет менять порядок слов в строке на обратный
+
+
+$string = 'Nikita(pervoe)      , Olegovich(vtoroe),   2223,Gashnikov(tretje)';
+
+function changeStr($string){
+    $arr = preg_split("/[\d,\s,]+/", $string);
+    $new_arr = [];
+    foreach ($arr as $item) {
+        array_unshift($new_arr, $item);
+    }
+    echo implode(' ', $new_arr);
+}
+
+changeStr($string);
+
+
