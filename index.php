@@ -25,16 +25,23 @@ showDay(1);
 $string = 'nikita olegovich gashnikov';
 
 function getSubStr($string, $length){
+
     $arr = explode(' ', $string);
-    if (strlen(substr($string, 0, $length)) < strlen($arr[0])){
-        return "ПУСТАЯ СТРОКА";
+    $new = substr($string, 0, $length);
+
+    if (strlen($new) < strlen($arr[0])){
+        return "ПУСТАЯ СТРОКА!!!";
+    } else if (strlen($new) === strlen($arr[0])){
+        return $arr[0];
+    } else if (strlen($new) >= strlen($string)){
+        return $string;
     } else {
         $new = substr($string, 0, $length);
         return substr($new, 0, strrpos($new, ' '));
     }
 }
 
-echo(getSubStr($string, 25));
+echo(getSubStr($string, 10));
 
 
 //task 3 Написать функцию, которая будет менять порядок слов в строке на обратный
