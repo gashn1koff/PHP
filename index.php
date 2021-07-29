@@ -36,7 +36,6 @@ function getSubStr($string, $length){
     } else if (strlen($new) >= strlen($string)){
         return $string;
     } else {
-        $new = substr($string, 0, $length);
         return substr($new, 0, strrpos($new, ' '));
     }
 }
