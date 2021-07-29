@@ -2,35 +2,19 @@
 // task 1 Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
 
 function showDay($a){
-    if ($a < 1 || $a > 7 || gettype($a) != 'int'){
-        echo 'Такого дня не существует';
-    } else {
-        switch ($a){
-            case 1:
-                echo 'Понедельник';
-                break;
-            case 2:
-                echo 'Вторник';
-                break;
-            case 3:
-                echo 'Среда';
-                break;
-            case 4:
-                echo 'Четверг';
-                break;
-            case 5:
-                echo 'Пятница';
-                break;
-            case 6:
-                echo 'Суббота';
-                break;
-            case 7:
-                echo 'Воскресенье';
-                break;
+    if (($a >= 1 || $a <= 7) && gettype($a) == "integer"){
+        $days = [1 => 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+        foreach ($days as $key => $value){
+            if($key === $a){
+                echo "$value"."</br>";
+            }
         }
+    } else {
+        echo 'Такого дня не существует';
     }
 }
 
+showDay(5);
 showDay(1);
 
 
@@ -41,42 +25,33 @@ showDay(1);
 $string = 'nikita olegovich gashnikov';
 
 function getSubStr($string, $length){
-    if($length === 0) {
-        echo 'Длина 0. Пустая строка!';
-    }else {
-        $old_string = substr($string, $length);
-        $new_string = substr($string, 0, $length);
-        echo "незаконченная строка ".$new_string."\n";
-        for($i = 0; $i < strlen($old_string); $i++){
-            if($old_string[$i] == ' ') {
-                break;
-            } else {
-                $new_string = $new_string.$old_string[$i];
-            }
-        }
-
-        echo "законченная строка ".$new_string."\n";
+    $arr = explode(' ', $string);
+    if (strlen(substr($string, 0, $length)) < strlen($arr[0])){
+        return "ПУСТАЯ СТРОКА";
+    } else {
+        $new = substr($string, 0, $length);
+        return substr($new, 0, strrpos($new, ' '));
     }
 }
 
-getSubStr($string, 10);
+echo(getSubStr($string, 25));
 
 
 //task 3 Написать функцию, которая будет менять порядок слов в строке на обратный
 
 
-$string = 'Nikita(pervoe)      , Olegovich(vtoroe),   2223,Gashnikov(tretje)';
+$string = 'Nikita(pervoe), Olegovich(vtoroe), Gashnikov(tretje)';
 
 function changeStr($string){
-    $arr = preg_split("/[\d,\s,]+/", $string);
+    $arr = explode(', ', $string);
     $new_arr = [];
     foreach ($arr as $item) {
         array_unshift($new_arr, $item);
     }
-    echo implode(' ', $new_arr);
+    return implode(' ', $new_arr);
 }
 
-changeStr($string);
+echo(changeStr($string));
 
 
 //task 4  Написать функцию, которая вычисляет среднее арифметическое элементов массива, переданного ей в качестве аргумента.
