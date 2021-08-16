@@ -16,7 +16,7 @@
 <?php include_once __DIR__."/../partials/header.php"?>
 
 <section class="list-php">
-    <img class="list-img-php" src="./img/php1.png" alt="css">
+    <img class="list-img-php" src="/assets/img/php1.png" alt="css">
     <div class="list-php-our-text">
         <h2 class="list-title-php"> Definition and features of the PHP language</h2>
         <p class="list-text-php">PHP (/pi:. eɪtʃ. pi: / English PHP: Hypertext Preprocessor —
@@ -45,10 +45,10 @@
             of Delphi
         </p>
     </div>
-    <img class="list-img-php" src="./img/php2.jpg" alt="css">
+    <img class="list-img-php" src="/assets/img/php2.jpg" alt="css">
 </section>
 <section class="list-php">
-    <img class="list-img-php" src="./img/php3.png" alt="css">
+    <img class="list-img-php" src="/assets/img/php3.png" alt="css">
     <div class="list-php-our-text2">
         <p class="list-text-php2">DevelNext (DN)
             At the same time, the main developer of Developstudio began to create a "reincarnation" of the previous environment.

@@ -32,6 +32,9 @@
         <li class="nav-item">
             <a href="/admin?type=product_list" style="color: white">Товары</a>
         </li>
+        <li class="nav-item">
+            <a href="?type=page_list" style="color: white">Статьи</a>
+        </li>
 
     </ul>
     <!-- End of Sidebar -->

@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     $sql = "INSERT INTO products (name, price, image) 
 VALUES ('{$data['name']}', '{$data['price']}', '{$data['image']}')";
     $res = mysqli_query($connection, $sql);
-debug($to);
+
 }
 
 

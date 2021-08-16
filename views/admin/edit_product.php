@@ -5,6 +5,8 @@ $sql =  "select * from products where id = $id";
 $res = mysqli_query($connection, $sql);
 $product = mysqli_fetch_assoc($res);
 debug($product);
+debug($_POST);
+debug($_FILES);
 
 //
 if (!empty($_POST)) {
@@ -19,6 +21,9 @@ if (!empty($_POST)) {
         $to = __DIR__ . '/../../assets/img/' . $image;
         move_uploaded_file($_FILES['image2']['tmp_name'], $to);
         $data['image'] = '/assets/img/' . $image;
+    }
+    else{
+        $data['image'] = $product['image'];
     }
 
 

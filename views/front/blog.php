@@ -1,4 +1,3 @@
-<?php debug($_SERVER);?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +17,7 @@
 
     <section class="list">
         <a href="./index_php.html">
-            <img class="list-img" src="./img/css.jpg" alt="css">
+            <img class="list-img" src="/assets/img/css.jpg" alt="css">
         </a>
         <a href="./index_php.html">
             <h2 class="list-title">CSS Basics</h2>
@@ -31,7 +30,7 @@
     </section>
     <section class="list">
         <a href="./index_php.html">
-            <img class="list-img" src="./img/html.jpg" alt="css">
+            <img class="list-img" src="/assets/img/html.jpg" alt="css">
         </a>
         <a href="./index_php.html">
             <h2 class="list-title">What is HTML really?</h2>
@@ -46,7 +45,7 @@
     </section>
     <section class="list">
         <a href="./index_php.html">
-            <img class="list-img" src="./img/JS.png" alt="css">
+            <img class="list-img" src="/assets/img/JS.png" alt="css">
         </a>
         <a href="./index_php.html">
             <h2 class="list-title">Modern JavaScript Tutorial</h2>
@@ -63,7 +62,7 @@
     </section>
     <section class="list">
         <a href="./index_php.html">
-            <img class="list-img" src="./img/php.jpg" alt="css">
+            <img class="list-img" src="/assets/img/php.jpg" alt="css">
         </a>
         <a href="./index_php.html">
             <h2 class="list-title"> Definition and features of the PHP language</h2>
