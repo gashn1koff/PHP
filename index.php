@@ -239,7 +239,7 @@ echo $obj1->getSalary() + $obj2->getSalary();
 //Сделайте класс Student, который наследует от класса User и вносит дополнительные private поля стипендия, курс,
 // а также геттеры и сеттеры для них.
 
-class Student{
+class Student extends User {
     private $stipendiya;
     private $course;
 
@@ -263,3 +263,45 @@ class Student{
         $this->course = $course;
     }
 }
+
+//task6
+// Сделайте класс Driver (Водитель), который будет наследоваться от класса Worker из предыдущей задачи.
+// Этот метод должен вносить следующие private поля: водительский стаж, категория вождения (A, B, C).
+
+class Drive extends Worker {
+    private $experience;
+    private $category;
+
+    public function __construct($experience, $category)
+    {
+        $this->experience = $experience;
+        $this->category = $category;
+    }
+
+    public function getExperience()
+    {
+        return $this->experience;
+    }
+
+    public function setExperience($experience)
+    {
+        $this->experience = $experience;
+    }
+
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+
+}
+$obj3 = new Drive(2,'B');
+$obj3->setCategory('22');
+echo($obj3->getCategory());
