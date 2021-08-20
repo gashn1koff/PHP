@@ -142,16 +142,50 @@
 // Сделайте также public методы getName, getSalary.
 //Создайте объект этого класса 'Дима', возраст 25, зарплата 1000. Выведите на экран произведение его возраста и зарплаты.
 
-class Worker {
-    private $name;
-    private $salary;
-    public $age;
+//class Worker {
+//    private $name;
+//    private $salary;
+//    public $age;
+//
+//    public function __construct($name, $age, $salary)
+//    {
+//        $this->name = $name;
+//        $this->age = $age;
+//        $this->salary = $salary;
+//    }
+//
+//    public function getName()
+//    {
+//        return $this->name;
+//    }
+//
+//    public function getSalary()
+//    {
+//        return $this->salary;
+//    }
+//}
+//
+//$obj = new Worker('Dima', 25, 1000);
+//
+//echo $obj->getSalary() * $obj->age;
 
-    public function __construct($name, $age, $salary)
+
+//task 5
+
+//Сделайте класс User, в котором будут следующие protected поля - name (имя), age (возраст),
+// public методы setName, getName, setAge, getAge.
+//
+
+
+
+class User {
+    protected $name;
+    protected $age;
+
+    public function __construct($name, $age)
     {
         $this->name = $name;
         $this->age = $age;
-        $this->salary = $salary;
     }
 
     public function getName()
@@ -159,15 +193,73 @@ class Worker {
         return $this->name;
     }
 
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+}
+
+//Сделайте класс Worker, который наследует от класса User и вносит дополнительное private поле salary (зарплата),
+// а также методы public getSalary и setSalary.
+//
+class Worker extends User {
+    private $salary;
+
     public function getSalary()
     {
         return $this->salary;
     }
+
+    public function setSalary($salary)
+    {
+        $this->salary = $salary;
+    }
 }
 
-$obj = new Worker('Dima', 25, 1000);
+//Создайте объект этого класса 'Иван', возраст 25, зарплата 1000.
+// Создайте второй объект этого класса 'Вася', возраст 26, зарплата 2000. Найдите сумму зарплата Ивана и Васи.
+//
+$obj1 = new Worker('Vasya', 26);
+$obj1->setSalary(1000);
+$obj2 = new Worker('Ivan', 25);
+$obj2->setSalary(2000);
+echo $obj1->getSalary() + $obj2->getSalary();
 
-echo $obj->getSalary() * $obj->age;
 
+//Сделайте класс Student, который наследует от класса User и вносит дополнительные private поля стипендия, курс,
+// а также геттеры и сеттеры для них.
 
+class Student{
+    private $stipendiya;
+    private $course;
 
+    public function getStipendiya()
+    {
+        return $this->stipendiya;
+    }
+
+    public function setStipendiya($stipendiya)
+    {
+        $this->stipendiya = $stipendiya;
+    }
+
+    public function getCourse()
+    {
+        return $this->course;
+    }
+
+    public function setCourse($course)
+    {
+        $this->course = $course;
+    }
+}
